@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ "main", "analyze" ]
+    branches: [ "main", "analyze" , "work"]
   pull_request:
-    branches: [ "main", "analyze" ]
+    branches: [ "main", "analyze" , "work"]
   workflow_dispatch:
 
 jobs:
