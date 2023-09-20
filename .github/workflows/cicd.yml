@@ -21,7 +21,8 @@ jobs:
       - name: Update Badges
         id: update_badges
         run: |
-          sed -i 's/testing/${{ steps.lint.outcome }} /g' README.md
+          if [ ${{ steps.lint.outcome }} == 'failure' ]; then
+            sed -i 's/failure/https:\/\//img.shields.io\/badge\/Install-Success-green.svg/g' README.md
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action";
           git add README.md
