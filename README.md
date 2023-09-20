@@ -2,4 +2,4 @@ LINT
 ABC
 LINT LINT
 aaaa
-LINT
+LINThello_world = 1
