@@ -1,5 +1,5 @@
-testing
+failure 
 ABC
-testing testing
+failure  failure 
 aaaa
-testinghello_world = 1
+failure hello_world = 1
