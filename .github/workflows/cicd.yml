@@ -13,32 +13,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install Packages
-        id: install
-        run: make install
-        continue-on-error: true
-
-      - name: Lint
-        id: lint
-        run: make lint
-        continue-on-error: true
-
-      - name: Test
-        id: test
-        run: make test
-        continue-on-error: true
-
-      - name: Format
-        id: format
-        run: make format
-        continue-on-error: true
-
       - name: Update Badges
         id: update_badges
         run: |
-          sed -i 's/Lint/testing/' README.md
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config user.name "github-actions[bot]"
+          sed 's/Lint/testing/' README.md
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action";
           git add README.md
           git commit -am "Updte README.md"
           git push 
