@@ -13,10 +13,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Lint
+        id: lint
+        run: make lint
+        continue-on-error: true
+
       - name: Update Badges
         id: update_badges
         run: |
-          sed -i 's/LINT/testing/g' README.md
+          sed -i 's/testing A* /${{ steps.lint.outcome }} /g' README.md
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action";
           git add README.md
