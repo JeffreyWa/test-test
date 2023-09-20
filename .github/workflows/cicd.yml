@@ -23,14 +23,14 @@ jobs:
       - name: Generate Badges
         id: generate_badges
         run: |
-          echo "::set-env name=INSTALL_BADGE::https://img.shields.io/badge/Install-Success-green.svg"
-          echo "::set-env name=LINT_BADGE::https://img.shields.io/badge/Lint-Success-green.svg"
-          echo "::set-env name=TEST_BADGE::https://img.shields.io/badge/Test-Success-green.svg"
-          echo "::set-env name=FORMAT_BADGE::https://img.shields.io/badge/Format-Success-green.svg"
+          echo "::set-output name=INSTALL_BADGE::https://img.shields.io/badge/Install-Success-green.svg"
+          echo "::set-output name=LINT_BADGE::https://img.shields.io/badge/Lint-Success-green.svg"
+          echo "::set-output name=TEST_BADGE::https://img.shields.io/badge/Test-Success-green.svg"
+          echo "::set-output name=FORMAT_BADGE::https://img.shields.io/badge/Format-Success-green.svg"
 
       - name: Output Badges
         run: |
-          echo "Install Badge: $INSTALL_BADGE"
-          echo "Lint Badge: $LINT_BADGE"
-          echo "Test Badge: $TEST_BADGE"
-          echo "Format Badge: $FORMAT_BADGE"
+          echo "Install Badge: ${{ steps.generate_badges.outputs.INSTALL_BADGE }}"
+          echo "Lint Badge: ${{ steps.generate_badges.outputs.LINT_BADGE }}"
+          echo "Test Badge: ${{ steps.generate_badges.outputs.TEST_BADGE }}"
+          echo "Format Badge: ${{ steps.generate_badges.outputs.FORMAT_BADGE }}"

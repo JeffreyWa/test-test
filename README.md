@@ -5,7 +5,7 @@
 Prepare a Python template for the future use of the data engineering course, or other Python projects.
 
 
-- Install: ![Install Badge]($INSTALL_BADGE)
-- Lint: ![Lint Badge]($LINT_BADGE)
-- Test: ![Test Badge]($TEST_BADGE)
-- Format: ![Format Badge]($FORMAT_BADGE)
+- Install: [![Install Badge](https://img.shields.io/badge/Install-Success-green.svg)](${{ steps.generate_badges.outputs.INSTALL_BADGE }})
+- Lint: [![Lint Badge](https://img.shields.io/badge/Lint-Success-green.svg)](${{ steps.generate_badges.outputs.LINT_BADGE }})
+- Test: [![Test Badge](https://img.shields.io/badge/Test-Success-green.svg)](${{ steps.generate_badges.outputs.TEST_BADGE }})
+- Format: [![Format Badge](https://img.shields.io/badge/Format-Success-green.svg)](${{ steps.generate_badges.outputs.FORMAT_BADGE }})
