@@ -1,5 +1,5 @@
-LINT
+testing
 ABC
-LINT LINT
+testing testing
 aaaa
-LINThello_world = 1
+testinghello_world = 1
