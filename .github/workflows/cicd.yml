@@ -33,6 +33,10 @@ jobs:
         run: make format
         continue-on-error: true
 
+      - name: Update Badges
+        id: update_badges
+        run: echo "whatever" >> README.md
+
       - name: Generate Badges
         id: generate_badges
         run: |
@@ -60,8 +64,6 @@ jobs:
             echo "https://img.shields.io/badge/Format-Failure-red.svg" >> "$FORMAT_BADGE"
           fi
         
-      - name: Update Badges
-        id: update_badges
-        run: echo "whatever" >> README.md
+
 
     
