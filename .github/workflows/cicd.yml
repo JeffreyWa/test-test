@@ -21,7 +21,7 @@ jobs:
       - name: Update Badges
         id: update_badges
         run: |
-          sed -i 's/\!\[CI\].*\.svg)!/https:\/\/img.shields.io\/badge\/Install-Failure-green.svg)/g' README.md
+          sed 's/\!\[CI\].*\.svg)/https:\/\/img.shields.io\/badge\/Install-Failure-green.svg)/g' README.md
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action";
           git add README.md
