@@ -16,7 +16,7 @@ jobs:
       - name: Update Badges
         id: update_badges
         run: |
-          sed 's/Lint/testing/' ./README.md
+          echo "hello_world = 1" >> README.md
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action";
           git add README.md
