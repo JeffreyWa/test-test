@@ -24,6 +24,7 @@ def analyze():
         "AcceptedCmp4",
         "AcceptedCmp5",
     ]
+    
     marketing = marketing[[outcome] + product + offer]
 
     # use mylib.py to manipulate data
@@ -34,5 +35,3 @@ def analyze():
     marketing.describe()
 
     plot = mylib.plot(marketing, outcome, marketing.columns.tolist(), "AcceptedOffer")
-
-    return marketing, plot
