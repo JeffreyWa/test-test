@@ -1,5 +1,14 @@
-from src import analyze
+from src import analyze as an
 
 
 def test_analyze():
-    assert 2 == 2
+    result = an.analyze()
+
+    assert result[0].columns.tolist() == [
+        "Income",
+        "MntWines",
+        "MntMeatProducts",
+        "TotalSpending",
+        "AcceptedOffer",
+    ]
+    assert result[1] == 3
