@@ -2,7 +2,7 @@
 Main cli or app entry point
 """
 
-from mylib.lib import add
+from lib.mylib import add
 import click
 
 

@@ -1,10 +1,10 @@
-from mylib import lib
+from lib import mylib
 import pandas as pd
 
 
 def analyze():
     marketing_data_full = pd.read_csv("data/ifood_df.csv")
-    marketing_data = lib.manipulate(
+    marketing_data = mylib.manipulate(
         marketing_data_full,
         "TotalSpending",
         [
@@ -16,7 +16,7 @@ def analyze():
         ],
         ["MntWines", "MntMeatProducts"],
     )
-    marketing_data = lib.manipulate(
+    marketing_data = mylib.manipulate(
         marketing_data,
         "AcceptedOffer",
         [
@@ -30,4 +30,4 @@ def analyze():
     )
     marketing_data.describe()
 
-    lib.plot(marketing_data, "Income", "AcceptedOffer")
+    mylib.plot(marketing_data, "Income", "AcceptedOffer")

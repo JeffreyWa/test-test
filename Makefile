@@ -3,10 +3,11 @@ install:
 		pip install -r requirements.txt
 
 test:
-	pytest -vv --cov=main --cov=mylib test_*.py
+	@echo "Running pytest..."
+	pytest -vv --cov=src --cov=lib mytest/
 
 format:	
-	black *.py 
+	black --include lib/*.py mytest/*.py src/*.py
 
 lint:
 	ruff check .
