@@ -34,7 +34,7 @@ def test_plot():
     # Call the plot function and check if it runs without errors
     try:
         # Call the plot function
-        nums_plot = mylib.plot(
+        nums_plot = mylib.scatter_plot_by_col(
             df, "target_variable", ["feature1", "feature2"], "col_variable"
         )
 

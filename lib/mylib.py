@@ -13,7 +13,7 @@ def manipulate(
     return df
 
 
-def plot(df: pd.DataFrame, outcome_var: str, feature_var: list, col_var: str) -> None:
+def scatter_plot_by_col(df: pd.DataFrame, outcome_var: str, feature_var: list, col_var: str) -> None:
     plot_count = 0
     for var in feature_var:
         if var != col_var and var != outcome_var:
