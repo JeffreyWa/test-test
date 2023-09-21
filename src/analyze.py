@@ -24,7 +24,7 @@ def analyze():
         "AcceptedCmp4",
         "AcceptedCmp5",
     ]
-    
+
     marketing = marketing[[outcome] + product + offer]
 
     # use mylib.py to manipulate data
@@ -34,4 +34,6 @@ def analyze():
     marketing = mylib.manipulate(marketing, "AcceptedOffer", offer, [])
     marketing.describe()
 
-    plot = mylib.scatter_plot_by_col(marketing, outcome, marketing.columns.tolist(), "AcceptedOffer")
+    plot = mylib.scatter_plot_by_col(
+        marketing, outcome, marketing.columns.tolist(), "AcceptedOffer"
+    )

@@ -1,5 +1,6 @@
 from src import analyze as an
 
+
 def test_analyze():
     result = an.analyze()
 
