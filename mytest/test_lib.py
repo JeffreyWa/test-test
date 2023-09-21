@@ -1,4 +1,4 @@
-from lib import mylib
+from mylib import mylib
 import pandas as pd
 
 

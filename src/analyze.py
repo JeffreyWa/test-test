@@ -1,9 +1,5 @@
-import os
-import sys
-
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+from mylib import mylib
 import pandas as pd
-from lib import mylib
 
 
 def analyze():
@@ -34,6 +30,7 @@ def analyze():
     marketing = mylib.manipulate(marketing, "AcceptedOffer", offer, [])
     marketing.describe()
 
-    plot = mylib.scatter_plot_by_col(
+    plot_num = mylib.scatter_plot_by_col(
         marketing, outcome, marketing.columns.tolist(), "AcceptedOffer"
     )
+    return marketing, plot_num
