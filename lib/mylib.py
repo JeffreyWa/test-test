@@ -16,7 +16,7 @@ def manipulate(
 def plot(df: pd.DataFrame, outcome_var: str, feature_var: list, col_var: str) -> None:
     plot_count = 0
     for var in feature_var:
-        if var != col_var:
+        if var != col_var and var != outcome_var:
             df.plot.scatter(x=var, y=outcome_var, c=col_var, cmap="viridis")
             plot_count += 1
 
