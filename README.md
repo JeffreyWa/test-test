@@ -1,5 +1,5 @@
-failure 
+https://img.shields.io/badge/Install-Success-green.svg 
 ABC
-failure  failure 
+https://img.shields.io/badge/Install-Success-green.svg  https://img.shields.io/badge/Install-Success-green.svg 
 aaaa
-failure hello_world = 1
+https://img.shields.io/badge/Install-Success-green.svg hello_world = 1
