@@ -13,12 +13,12 @@ def manipulate(
     return df
 
 
-def scatter_plot_by_col(df: pd.DataFrame, outcome_var: str, 
-                        feature_var: list, col_var: str) -> None:
+def scatter_plot_by_col(df: pd.DataFrame, predict_var: str, 
+                        outcome_var: list, col_var: str) -> None:
     plot_count = 0
-    for var in feature_var:
-        if var != col_var and var != outcome_var:
-            df.plot.scatter(x=var, y=outcome_var, c=col_var, cmap="viridis")
+    for var in outcome_var:
+        if var != col_var and var != predict_var:
+            df.plot.scatter(x= predict_var, y=outcome_var, c=col_var, cmap="viridis")
             plot_count += 1
 
     return plot_count
