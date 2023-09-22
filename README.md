@@ -7,7 +7,7 @@
 ### Information about the DataSet
 The dataset is a sample dataset from a food delivery platform, who collected 2240 customer's base information and interaction with the company.
 Below are the Columns:
-![column](mydata/dictionary.png)
+![column](data/dictionary.png)
 And you can learn more about the dataset from the [project GitHub link](https://github.com/nailson/ifood-data-business-analyst-test)
 
 ### Manipulate the Data
