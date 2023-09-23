@@ -34,7 +34,7 @@
 				"python.linting.pycodestylePath": "/home/vscode/venv/bin/pycodestyle",
 				"python.linting.pydocstylePath": "/home/vscode/venv/bin/pydocstyle",
 				"python.linting.pylintPath": "/home/vscode/venv/bin/pylint",
-				"lldb.executable": "/usr/bin/lldb",
+//				"lldb.executable": "/usr/bin/lldb",
 				"files.watcherExclude": {
 					"**/target/**": true
 				}
