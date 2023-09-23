@@ -2,11 +2,11 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/codespaces-linux
 {
 	"name": "GitHub Codespaces (Default)",
-
-	"build": {
-		"dockerfile": "Dockerfile",
-		"context": ".."
-	},
+        "image": "mcr.microsoft.com/devcontainers/python:0-3.11",
+//	"build": {
+//		"dockerfile": "Dockerfile",
+//		"context": ".."
+//	},
 //	"features": {
 //		"ghcr.io/devcontainers/features/nvidia-cuda:1": { 
 //		  "installCudnn": true
@@ -56,19 +56,19 @@
 		}
 	},
 
-	"remoteUser": "codespace",
+	"remoteUser": "vscode",
 
 	"overrideCommand": false,
 
-	"mounts": ["source=codespaces-linux-var-lib-docker,target=/var/lib/docker,type=volume"],
+	//"mounts": ["source=codespaces-linux-var-lib-docker,target=/var/lib/docker,type=volume"],
 
-	"runArgs": [
-		"--cap-add=SYS_PTRACE",
-		"--security-opt",
-		"seccomp=unconfined",
-		"--privileged",
-		"--init"
-	],
+	//"runArgs": [
+	//	"--cap-add=SYS_PTRACE",
+	//	"--security-opt",
+	//	"seccomp=unconfined",
+	//	"--privileged",
+	//	"--init"
+	//],
 	
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
