@@ -6,7 +6,7 @@ FROM mcr.microsoft.com/devcontainers/python:3.11
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
 RUN apt-get update && apt-get -y install --no-install-recommends \
-    python3.8-venv
+    python3.11-venv
 #   gcc 
 
 
