@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+set -e
+set -x
 sudo apt-get update && apt-get -y install --no-install-recommends \
    python3.11-venv
 USER="vscode"
