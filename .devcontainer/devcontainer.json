@@ -2,11 +2,11 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/codespaces-linux
 {
 	"name": "GitHub Codespaces (Default)",
-//    "image": "mcr.microsoft.com/devcontainers/python:0-3.11",
-	"build": {
-		"dockerfile": "Dockerfile",
-		"context": ".."
-	},
+    "image": "mcr.microsoft.com/devcontainers/python:0-3.11",
+	//"build": {
+	//	"dockerfile": "Dockerfile",
+	//	"context": ".."
+	//},
 //	"features": {
 //		"ghcr.io/devcontainers/features/nvidia-cuda:1": { 
 //		  "installCudnn": true
@@ -45,7 +45,7 @@
 		"--privileged",
 		"--init"
 	],
-	"overrideCommand": false,
+	//"overrideCommand": false,
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
