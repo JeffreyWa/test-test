@@ -2,11 +2,11 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/codespaces-linux
 {
 	"name": "GitHub Codespaces (Default)",
-    //"image": "mcr.microsoft.com/devcontainers/python:0-3.11",
-	"build": {
-		"dockerfile": "Dockerfile",
-		"context": ".."
-	},
+    "image": "mcr.microsoft.com/devcontainers/python:0-3.11",
+	//"build": {
+	//	"dockerfile": "Dockerfile",
+	//	"context": ".."
+	//},
 //	"features": {
 //		"ghcr.io/devcontainers/features/nvidia-cuda:1": { 
 //		  "installCudnn": true
@@ -52,5 +52,5 @@
 	// "oryx build" will automatically install your dependencies and attempt to build your project
 	//"postCreateCommand": "oryx build -p virtualenv_name=.venv --log-file /tmp/oryx-build.log --manifest-dir /tmp || echo 'Could not auto-build. Skipping.'"
 	// "postCreateCommand":  "pip3 install -r requirements.txt"
-	"postCreateCommand":  "bash setup.sh"
+	"postCreateCommand":  "source /home/vocode/venv/bin/activate"
 }  
