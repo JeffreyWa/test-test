@@ -51,5 +51,10 @@
 
 	// "oryx build" will automatically install your dependencies and attempt to build your project
 	//"postCreateCommand": "oryx build -p virtualenv_name=.venv --log-file /tmp/oryx-build.log --manifest-dir /tmp || echo 'Could not auto-build. Skipping.'"
-	 "postCreateCommand": "pip3 install -r requirements.txt"
+	 "postCreateCommand": [
+		"echo 'source /home/vscode/venv/bin/activate' >> ~/.bashrc",
+		"python -m venv /home/vscode/venv",
+		"source /home/vocode/venv/bin/activate",
+		"pip3 install -r requirements.txt"
+	 ]
 }
