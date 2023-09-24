@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 sudo apt-get update && apt-get -y install --no-install-recommends \
    python3.11-venv
-USER="codespace"
+USER="vscode"
 VENV_PATH="/home/${USER}/venv"
 su $USER -c "/usr/bin/python3 -m venv /home/${USER}/venv" \
 source /home/vocode/venv/bin/activate
